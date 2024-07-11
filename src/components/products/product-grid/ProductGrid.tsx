@@ -1,11 +1,23 @@
-import { Product } from "@/interfaces"
+import { Product } from '@/interfaces';
+import { ProductGridItem } from './ProductGridItem';
 
 interface Props {
-    products: Product[];
+  products: Product[];
 }
 
-export const ProductGrid = () => {
+
+export const ProductGrid = ( { products }: Props ) => {
   return (
-    <div>ProductGrid</div>
-  )
-}
+    <div className="grid grid-cols-2 sm:grid-cols-3 gap-10 mb-10">
+      {
+        products.map( product => (
+          <ProductGridItem
+            key={ product.slug }
+            product={ product }
+          />
+        ) )
+      }
+
+    </div>
+  );
+};
