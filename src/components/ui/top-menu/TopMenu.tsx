@@ -16,7 +16,7 @@ export const TopMenu = () => {
                 <Link 
                     href="/">
                         <span className={`${titleFont.className} antialiased font-bold`}>Teslo</span>
-                        <span className="hover:text-blue-900"> | Shop by jjrh92.dev</span>
+                        <span className="hover:text-blue-900"> | jjrh92.dev</span>
                 </Link>
             </div>
             {/* Center Menu */}
