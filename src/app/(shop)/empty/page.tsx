@@ -2,7 +2,7 @@ import { IoCartOutline } from 'react-icons/io5';
 import Link from 'next/link';
 
 // eslint-disable-next-line import/no-anonymous-default-export, react/display-name
-export default function() {
+export default function EmptyPage() {
   return (
     <div className="flex justify-center items-center h-[800px]">
       <IoCartOutline size={80} className='mx-5'/>

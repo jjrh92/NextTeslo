@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Title } from '../../../components/ui/title/Title';
-import { initialData } from '@/seed';
+import { initialData } from "@/seed/seed";
 import Image from 'next/image';
 
 const productsInCart = [
@@ -11,7 +11,7 @@ const productsInCart = [
 
 
 // eslint-disable-next-line import/no-anonymous-default-export, react/display-name
-export default function() {
+export default function CheckoutPage() {
   return (
     <div className="flex justify-center items-center mb-72 px-10 sm:px-0">
 

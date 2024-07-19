@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { IoCardOutline } from 'react-icons/io5';
 
 // eslint-disable-next-line import/no-anonymous-default-export, react/display-name
-export default function() {
+export default function OrdersPage() {
   return (
     <>
       <Title title="Orders" />

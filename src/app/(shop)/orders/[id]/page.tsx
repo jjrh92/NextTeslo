@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Title } from '@/components';
-import { initialData } from '@/seed';
+import { initialData } from "@/seed/seed";
 import Image from 'next/image';
 import { clsx } from 'clsx';
 import { IoCardOutline } from 'react-icons/io5';
@@ -18,7 +18,7 @@ interface Props {
 }
 
 // eslint-disable-next-line import/no-anonymous-default-export, react/display-name
-export default function({params}: Props) {
+export default function OrdersByIdPage({params}: Props) {
 
   const {id} = params;
 
