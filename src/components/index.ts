@@ -1,6 +1,8 @@
 export * from "./products/product-grid/ProductGrid";
 export * from "./products/product-grid/ProductGridItem";
 
+export * from "./providers/Provider";
+
 export * from "./product/slideshow/ProductSlideshow";
 export * from "./product/slideshow/ProductMobileSlideshow";
 

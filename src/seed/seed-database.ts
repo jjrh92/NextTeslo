@@ -2,6 +2,7 @@ import { create } from 'zustand';
 import { initialData } from './seed';
 import prisma from '../lib/prisma';
 
+
 async function main() {
 
   // 1. Borrar registros previos

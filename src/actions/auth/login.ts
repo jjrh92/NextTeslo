@@ -1,10 +1,11 @@
-"use server";
+'use server';
 
-import { signIn } from "../../../auth.config";
-import { sleep } from "@/utils";
 
+import { signIn } from '@/auth.config';
+import { sleep } from '@/utils';
+ 
 // ...
-
+ 
 export async function authenticate(
   prevState: string | undefined,
   formData: FormData,
@@ -12,17 +13,41 @@ export async function authenticate(
   try {
 
     // await sleep(2);
-    await signIn("credentials", {
+    
+    await signIn('credentials', {
       ...Object.fromEntries(formData),
       redirect: false,
     });
 
-    return "Success";
+    return 'Success';
+
 
   } catch (error) {
-
     console.log(error);
-    return "CredentialsSignin"
+
+    return 'CredentialsSignin'
+
 
   }
+}
+
+
+export const login = async(email:string, password: string) => {
+
+  try {
+
+    await signIn('credentials',{ email, password })
+
+    return {ok: true};
+    
+  } catch (error) {
+    console.log(error);
+    return {
+      ok: false,
+      message: 'No se pudo iniciar sesión'
+    }
+    
+  }
+
+
 }
