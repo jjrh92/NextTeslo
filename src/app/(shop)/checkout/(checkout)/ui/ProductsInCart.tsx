@@ -11,10 +11,9 @@ export const ProductsInCart = () => {
   const [loaded, setLoaded] = useState(false);
   const productsInCart = useCartStore((state) => state.cart);
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     setLoaded(true);
-  });
+  }, []);
 
   if (!loaded) {
     return <p>Loading...</p>;

@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import clsx from "clsx";
@@ -57,7 +56,7 @@ export const AdressForm = ({ countries, userStoredAddress = {} }: Props) => {
     if (address.firstName) {
       reset(address);
     }
-  },[]);
+  },[address, reset]);
 
   const onSubmit = async (data: FormInputs) => {
 
